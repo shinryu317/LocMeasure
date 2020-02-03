@@ -1,0 +1,62 @@
+{
+    "C/C++": {
+        "single_line_comment_mark": "//",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "CSS": {
+        "single_line_comment_mark": "",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "Fortran": {
+        "single_line_comment_mark": "!",
+        "multi_line_comment_mark": []
+    },
+    "Go": {
+        "single_line_comment_mark": "//",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "HTML": {
+        "single_line_comment_mark": "",
+        "multi_line_comment_mark": ["<!--", "-->"]
+    },
+    "Java": {
+        "single_line_comment_mark": "//",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "JavaScript": {
+        "single_line_comment_mark": "//",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "Lua": {
+        "single_line_comment_mark": "--",
+        "multi_line_comment_mark": ["--[[", "]]"]
+    },
+    "Python": {
+        "single_line_comment_mark": "#",
+        "multi_line_comment_mark": ["'''", "'''"]
+    },
+    "R": {
+        "single_line_comment_mark": "#",
+        "multi_line_comment_mark": []
+    },
+    "Ruby": {
+        "single_line_comment_mark": "#",
+        "multi_line_comment_mark": ["=begin", "=end"]
+    },
+    "Scala": {
+        "single_line_comment_mark": "//",
+        "multi_line_comment_mark": ["/*", "*/"]
+    },
+    "ShellScript": {
+        "single_line_comment_mark": "#",
+        "multi_line_comment_mark": []
+    },
+    "Perl": {
+        "single_line_comment_mark": "#",
+        "multi_line_comment_mark": ["=.", "=cut"]
+    },
+    "PHP": {
+        "single_line_comment_mark": ["//", "#"],
+        "multi_line_comment_mark": ["/*", "*/"]
+    }
+}

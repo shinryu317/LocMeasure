@@ -1,0 +1,26 @@
+/*---------------------------------
+  multi line comment
+---------------------------------*/
+.first-view{
+  background : url(bg-firstview.png);
+}
+
+/* single line comment */
+.about{
+  background : url(bg-about.png);
+}
+
+/*
+  multi line comment
+*/
+.btn-more{
+  background-color : #e057c4;
+  color : white;
+}
+
+/*
+	撮影プラン*/
+.plan-each{
+  float : left;
+  width : 460px;
+}
