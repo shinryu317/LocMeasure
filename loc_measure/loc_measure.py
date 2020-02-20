@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
+import argparse
 import json
 import os
 import re
+from glob import glob
+from os import path
 
 
 class LocMeasure():
@@ -23,9 +26,11 @@ class LocMeasure():
     @language.setter
     def language(self, language):
         try:
+            cfg = self.cfg[language]
             self._language = language
-            self.single_line_comment_mark = self.cfg[language]['single_line_comment_mark']
-            self.multi_line_comment_mark = self.cfg[language]['multi_line_comment_mark']
+            self.single_line_comment_mark = cfg['single_line_comment_mark']
+            self.multi_line_comment_mark = cfg['multi_line_comment_mark']
+            self.extensions = cfg['extensions']
         except KeyError as e:
             raise ValueError('Unsupported language: {}'.format(language)) from e
 
@@ -110,6 +115,10 @@ class LocMeasure():
         if self._language is None:
             raise ValueError('Unsupported language: {}'.format(self._language))
 
+        extension = path.splitext(file_path)[1]
+        if not extension in self.extensions:
+            return None
+
         with open(file_path, 'r') as f:
             lines = [line.strip() for line in f.readlines()]
 
@@ -124,9 +133,29 @@ class LocMeasure():
             count += 1
         return count
 
-'''
-cfg_file = 'loc_measure/config.json'
-loc_measure = LocMeasure(cfg_file)
-loc_measure.language = 'Python'
-print(loc_measure.count('test/code.py'))
-'''
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('code_path',
+                        help='Analyze source codes/directory.')
+    parser.add_argument('--language', '-l', required=True,
+                        choices=('C/C++', 'CSS', 'Fortran', 'Go', 'HTML', 'Java', 'JavaScript', 'Lua', 'Python', 'R', 'Ruby', 'Scala', 'ShellScript', 'Perl', 'PHP'),
+                        help='Analysis language.')
+    parser.add_argument('--config_file', '-c', default='config.json',
+                        help='Configuration file for the LocMeasure application.')
+    args = parser.parse_args()
+
+    loc_measure = LocMeasure(args.config_file)
+    loc_measure.language = args.language
+
+    if path.isdir(args.code_path):
+        code_path_list = glob(path.join(args.code_path, '*'), recursive=True)
+    elif path.isfile(args.code_path):
+        code_path_list = [args.code_path]
+    else:
+        raise Exception('Not file or directory: {}'.format(args.code_path))
+
+    for code_path in code_path_list:
+        loc = loc_measure.count(code_path)
+        if loc is not None:
+            print('{}: {}'.format(path.abspath(code_path), loc))

@@ -1,62 +1,77 @@
 {
     "C/C++": {
         "single_line_comment_mark": "//",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".c", ".cc", ".cpp", ".h", ".hpp"]
     },
     "CSS": {
         "single_line_comment_mark": "",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".css"]
     },
     "Fortran": {
         "single_line_comment_mark": "!",
-        "multi_line_comment_mark": []
+        "multi_line_comment_mark": [],
+        "extensions": [".f", ".F", "f90", "F90", "f95", "F95", ".f03", ".F03", ".for"]
     },
     "Go": {
         "single_line_comment_mark": "//",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".go"]
     },
     "HTML": {
         "single_line_comment_mark": "",
-        "multi_line_comment_mark": ["<!--", "-->"]
+        "multi_line_comment_mark": ["<!--", "-->"],
+        "extensions": [".htm", ".html"]
     },
     "Java": {
         "single_line_comment_mark": "//",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".java"]
     },
     "JavaScript": {
         "single_line_comment_mark": "//",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".js"]
     },
     "Lua": {
         "single_line_comment_mark": "--",
-        "multi_line_comment_mark": ["--[[", "]]"]
+        "multi_line_comment_mark": ["--[[", "]]"],
+        "extensions": [".lua"]
     },
     "Python": {
         "single_line_comment_mark": "#",
-        "multi_line_comment_mark": ["'''", "'''"]
+        "multi_line_comment_mark": ["'''", "'''"],
+        "extensions": [".py", ".pyx"]
     },
     "R": {
         "single_line_comment_mark": "#",
-        "multi_line_comment_mark": []
+        "multi_line_comment_mark": [],
+        "extensions": [".r", ".R"]
     },
     "Ruby": {
         "single_line_comment_mark": "#",
-        "multi_line_comment_mark": ["=begin", "=end"]
+        "multi_line_comment_mark": ["=begin", "=end"],
+        "extensions": [".rb"]
     },
     "Scala": {
         "single_line_comment_mark": "//",
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".scala"]
     },
     "ShellScript": {
         "single_line_comment_mark": "#",
-        "multi_line_comment_mark": []
+        "multi_line_comment_mark": [],
+        "extensions": [".sh"]
     },
     "Perl": {
         "single_line_comment_mark": "#",
-        "multi_line_comment_mark": ["=.", "=cut"]
+        "multi_line_comment_mark": ["=.", "=cut"],
+        "extensions": [".pl", ".pm"]
     },
     "PHP": {
         "single_line_comment_mark": ["//", "#"],
-        "multi_line_comment_mark": ["/*", "*/"]
+        "multi_line_comment_mark": ["/*", "*/"],
+        "extensions": [".php"]
     }
 }
