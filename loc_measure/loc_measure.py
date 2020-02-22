@@ -133,8 +133,7 @@ class LocMeasure():
             count += 1
         return count
 
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('code_path',
                         help='Analyze source codes/directory.')
@@ -159,3 +158,7 @@ if __name__ == '__main__':
         loc = loc_measure.count(code_path)
         if loc is not None:
             print('{}: {}'.format(path.abspath(code_path), loc))
+
+
+if __name__ == '__main__':
+    main()
