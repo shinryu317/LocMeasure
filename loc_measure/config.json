@@ -12,7 +12,7 @@
     "Fortran": {
         "single_line_comment_mark": "!",
         "multi_line_comment_mark": [],
-        "extensions": [".f", ".F", "f90", "F90", "f95", "F95", ".f03", ".F03", ".for"]
+        "extensions": [".f", ".F", ".f90", ".F90", ".f95", ".F95", ".f03", ".F03", ".for"]
     },
     "Go": {
         "single_line_comment_mark": "//",
